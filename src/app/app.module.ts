@@ -7,11 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './ui/home';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { SlidesComponent } from './ui/slides';
+import { SlideComponent } from './ui/slide';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		HomeComponent
+		HomeComponent,
+		SlidesComponent,
+		SlideComponent
 	],
 	imports: [
 		CommonModule,
