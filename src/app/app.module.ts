@@ -9,6 +9,7 @@ import { HomeComponent } from './ui/home';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SlidesComponent } from './ui/slides';
 import { SlideComponent } from './ui/slide';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
 	declarations: [
@@ -24,6 +25,8 @@ import { SlideComponent } from './ui/slide';
 		AppRoutingModule,
 		RouterModule,
 		MatTooltipModule,
+		MatIconModule
+
 	],
 	providers: [
 	],

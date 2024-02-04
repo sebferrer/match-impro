@@ -1,3 +1,27 @@
 $mobile-width-breakpoint: 600px;
 $tablet-width-breakpoint: 1000px;
 
+.direction {
+    cursor: pointer;
+}
+
+#back {
+    position: absolute;
+    left: 10%;
+    top: 45%;
+    transform: scale(500%);
+}
+
+#forward {
+    position: absolute;
+    right: 8%;
+    top: 45%;
+    transform: scale(500%);
+}
+
+#pagination {
+    font-size: 4rem;
+    position: absolute;
+    left: 5%;
+    top: 65%;
+}

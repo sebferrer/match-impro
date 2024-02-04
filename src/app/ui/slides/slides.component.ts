@@ -21,23 +21,29 @@ export class SlidesComponent implements OnInit {
 	public ngOnInit(): void {
 		this.slides = this.shuffleArray(SLIDES)
 		this.currentSlideIndex = 0;
-		this.currentSlide = this.slides[0];
+		this.currentSlide = '0';
 	}
 
 	public changeSlide(event: any, direction: boolean): void {
-		event.preventDefault()
-		if(direction) {
-			if(this.currentSlideIndex == this.size-1) {
+		if (event != null) {
+			event.preventDefault()
+		}
+		if (direction) {
+			if (this.currentSlideIndex == this.size) {
 				return
 			}
 			this.currentSlideIndex++;
 		} else {
-			if(this.currentSlideIndex == 0) {
+			if (this.currentSlideIndex == 0) {
 				return
 			}
 			this.currentSlideIndex--;
 		}
-		this.currentSlide = this.slides[this.currentSlideIndex];
+		if(this.currentSlideIndex === 0) {
+			this.currentSlide = '0';
+			return
+		}
+		this.currentSlide = this.slides[this.currentSlideIndex-1];
 	}
 
 	private shuffleArray(array: any): string[] {

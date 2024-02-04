@@ -1,1 +1,7 @@
-<app-slide [id]="currentSlide" (click)="changeSlide($event, false)" (contextmenu)="changeSlide($event, true)"></app-slide>
+<div id="pagination" *ngIf="currentSlideIndex > 0">
+    <p>{{ (currentSlideIndex) }} / {{ size }}</p>
+</div>
+<mat-icon class="direction" id="back" (click)="changeSlide(null, false)">arrow_back_ios</mat-icon>
+<mat-icon class="direction" id="forward" (click)="changeSlide(null, true)">arrow_forward_ios</mat-icon>
+<app-slide [id]="currentSlide" (click)="changeSlide($event, false)"
+    (contextmenu)="changeSlide($event, true)"></app-slide>
