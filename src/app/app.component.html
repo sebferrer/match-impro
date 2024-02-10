@@ -1,22 +1,22 @@
 <main class="main">
-  <section class="main-content">
-      <div class="header">
-          <div class="header-content">
-              <div class="header-contentLeft">
-                  <p class="header-title">Partage Fleuri</p>
-              </div>
-              <div class="slides" routerLink="/slides">
-                <p>Start</p>
-            </div>
-              <div class="header-contentRight">
+    <section class="main-content">
+        <div class="header">
+            <div class="header-content">
+                <div class="header-contentLeft" routerLink="/">
+                    <p class="header-title">Partage Fleuri</p>
+                </div>
+                <div class="menu-item" routerLink="/slides">
+                    <p>Match impro</p>
+                </div>
+                <!--div class="header-contentRight">
                   <a class="logo" href="#" [matTooltip]="'tooltip'">
                       logo
                   </a>
-              </div>
-          </div>
-      </div>
-      <div class="container">
-          <router-outlet></router-outlet>
-      </div>
-  </section>
+              </div-->
+            </div>
+        </div>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+    </section>
 </main>

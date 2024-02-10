@@ -17,11 +17,32 @@ $tablet-width-breakpoint: 1000px;
     right: 8%;
     top: 45%;
     transform: scale(500%);
-}
+}   
 
 #pagination {
     font-size: 4rem;
     position: absolute;
     left: 5%;
     top: 65%;
+}
+
+.arrow-light {
+    color: rgb(194, 194, 194);
+}
+
+#restart-button {
+    font-size: 3rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 4rem;
+    z-index: 100;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+}
+
+#nullContent {
+    margin-top: 5rem;
+    font-size: 2rem;
+    text-align: center;
 }

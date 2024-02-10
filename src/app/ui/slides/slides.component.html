@@ -1,7 +1,17 @@
-<div id="pagination" *ngIf="currentSlideIndex > 0">
-    <p>{{ (currentSlideIndex) }} / {{ size }}</p>
+<div id="slides-container" *ngIf="enoughSlides() else notEnoughSlides">
+    <div id="pagination" *ngIf="currentSlideIndex > 0">
+        <p>{{ (currentSlideIndex) }} / {{ size }}</p>
+    </div>
+    <mat-icon class="direction" id="back" [ngClass]="currentSlideIndex === 0 ? 'arrow-light' : ''"
+        (click)="changeSlide(null, false)">arrow_back_ios</mat-icon>
+    <mat-icon class="direction" id="forward" [ngClass]="currentSlideIndex === 7 ? 'arrow-light' : ''"
+        (click)="changeSlide(null, true)">arrow_forward_ios</mat-icon>
+    <app-slide [id]="currentSlide" (click)="changeSlide($event, false)"
+        (contextmenu)="changeSlide($event, true)"></app-slide>
+    <mat-icon id="restart-button" (click)="initSlides()">refresh</mat-icon>
 </div>
-<mat-icon class="direction" id="back" (click)="changeSlide(null, false)">arrow_back_ios</mat-icon>
-<mat-icon class="direction" id="forward" (click)="changeSlide(null, true)">arrow_forward_ios</mat-icon>
-<app-slide [id]="currentSlide" (click)="changeSlide($event, false)"
-    (contextmenu)="changeSlide($event, true)"></app-slide>
+<ng-template #notEnoughSlides>
+    <div id="nullContent">
+        C'est fini !
+    </div>
+</ng-template>

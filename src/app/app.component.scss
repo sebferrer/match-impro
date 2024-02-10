@@ -1,5 +1,6 @@
 .header-title {
     font-size: 1.8rem;
+    cursor: pointer;
 }
 
 .header-content {
@@ -7,4 +8,10 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+}
+
+.menu-item {
+    font-size: 1.8rem;
+    margin-left: 4rem;
+    cursor: pointer;
 }
